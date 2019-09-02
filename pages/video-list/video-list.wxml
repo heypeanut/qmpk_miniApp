@@ -1,2 +1,26 @@
 <!--pages/video-list/video-list.wxml-->
-<text>视频列表页</text>
+<view class="list-wrapper">
+  <view class="video-list">
+    <view 
+      class="item" 
+      wx:for="{{videoList}}"
+      wx:key="{{item.id}}"
+      >
+      <view class="cover">
+        <image src="{{item.cover}}"></image>
+        <text class="time">{{item.videoTime.videoTime}}</text>
+      </view>
+      <view class="content">
+        <text class="title">{{compute.winner(item.watching.team,item.winner)}} vs {{compute.winner(item.other.team,item.winner)}}</text>
+        <text class="time">{{item.match_time}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<wxs module="compute">
+module.exports = {
+  winner:function(team,winner){
+    return team === winner? team + "(胜)" : team
+  }
+}
+</wxs>

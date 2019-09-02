@@ -1,1 +1,54 @@
 /* pages/video-list/video-list.wxss */
+.video-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 25rpx 30rpx;
+}
+
+.item {
+  width: 48%;
+  /* margin-top: 28rpx; */
+  padding: 10rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 6rpx;
+  margin-bottom: 24rpx;
+}
+
+.item .cover {
+  position: relative;
+}
+
+.item .cover image{
+  width: 100%;
+  height: 220rpx;
+  border-radius: 6rpx;
+}
+
+.item .cover .time{
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 0 5rpx;
+  box-sizing: border-box;
+}
+
+.content .title {
+  font-size: 22rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.content .time {
+  font-size: 22rpx;
+  color:#999;
+}
