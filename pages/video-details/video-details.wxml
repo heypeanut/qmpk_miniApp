@@ -1,1 +1,31 @@
 <!--pages/video-details/video-details.wxml-->
+<view class="details-wrapper">
+  <view class="header">
+    <video src="{{video.video}}" autoplay show-mute-btn="true"	></video>
+    <view class="title-wrapper">
+      <text class="title">{{util.winner(video.watching.team,video.winner)}} vs {{util.winner(video.other.team,video.winner)}}</text>
+      <text class="time">{{video.match_time}}</text>
+    </view>
+  </view>
+  <view class="recommend">
+    <view class="list">
+      <view class="title">视频推荐</view>
+      <view
+       class="item" 
+       wx:for="{{recommendList}}"
+       bindtap="selectItem"
+       data-video="{{item}}"
+       >
+        <view class="cover">
+          <image src="{{item.cover}}"></image>
+          <text class="time">{{item.videoTime.videoTime}}</text>
+        </view>
+        <view class="content">
+          <text class="title">{{util.winner(item.watching.team,item.winner)}} vs {{util.winner(item.other.team,item.winner)}}</text>
+          <text class="time">{{item.match_time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<wxs src="../../wxs/video.wxs" module="util" />

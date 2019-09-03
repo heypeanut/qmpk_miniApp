@@ -5,22 +5,18 @@
       class="item" 
       wx:for="{{videoList}}"
       wx:key="{{item.id}}"
+      bindtap="selectItem"
+      data-video="{{item}}"
       >
       <view class="cover">
         <image src="{{item.cover}}"></image>
         <text class="time">{{item.videoTime.videoTime}}</text>
       </view>
       <view class="content">
-        <text class="title">{{compute.winner(item.watching.team,item.winner)}} vs {{compute.winner(item.other.team,item.winner)}}</text>
+        <text class="title">{{video.winner(item.watching.team,item.winner)}} vs {{video.winner(item.other.team,item.winner)}}</text>
         <text class="time">{{item.match_time}}</text>
       </view>
     </view>
   </view>
 </view>
-<wxs module="compute">
-module.exports = {
-  winner:function(team,winner){
-    return team === winner? team + "(胜)" : team
-  }
-}
-</wxs>
+<wxs src="../../wxs/video.wxs" module="video" />

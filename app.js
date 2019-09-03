@@ -5,5 +5,7 @@ App({
     
   },
   globalData: {
+    video:{},
+    videoList:[]
   }
 })

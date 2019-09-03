@@ -1,13 +1,38 @@
 {
   "pages": [
     "pages/video-list/video-list",
-    "pages/video-details/video-details"
+    "pages/video-details/video-details",
+    "pages/rank/rank",
+    "pages/analysis/analysis"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#b02015",
     "navigationBarTitleText": "全民PK视频小助手",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#b02015",
+    "list": [
+      {
+        "pagePath": "pages/video-list/video-list",
+        "text": "视频",
+        "iconPath": "./image/video.png",
+        "selectedIconPath": "./image/video-select.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "排行",
+        "iconPath": "./image/rank.png",
+        "selectedIconPath": "./image/rank-select.png"
+      },
+      {
+        "pagePath": "pages/analysis/analysis",
+        "text": "队伍分析",
+        "iconPath": "./image/analysis.png",
+        "selectedIconPath": "./image/analysis-select.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

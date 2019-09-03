@@ -1,0 +1,5 @@
+module.exports = {
+  winner: function (team, winner) {
+    return team === winner ? team + "(胜)" : team
+  }
+}

@@ -1,5 +1,4 @@
-// pages/video-details/video-details.js
-const app = getApp()
+// pages/analysis/analysis.js
 Page({
 
   /**
@@ -13,15 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const video = app.globalData.video
-    const videoList = app.globalData.videoList
-    const recommendList = this._normalRecommend(videoList, video)
-    // console.log(recommendList, video)
-    this.setData({
-      video: video,
-      videoList: videoList,
-      recommendList: recommendList
-    })
+
   },
 
   /**
@@ -71,22 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  selectItem(e){
-    let video = e.currentTarget.dataset.video
-    const recommendList = this._normalRecommend(this.data.videoList, video)
-    this.setData({
-      video: video,
-      recommendList: recommendList
-    })
-  },
-  _normalRecommend(list,currentVideo){
-    const ret = []
-    list.forEach(video=>{
-      if (video.id !== currentVideo.id){
-        ret.push(video)
-      }
-    })
-    return ret
   }
 })

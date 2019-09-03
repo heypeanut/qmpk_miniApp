@@ -1,4 +1,5 @@
 // pages/video-list/video-list.js
+const app = getApp()
 Page({
 
   /**
@@ -12,22 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: '数据加载中',
-    })
-    wx.request({
-      url:'http://localhost:3000/list',
-      success:(res)=>{
-        // console.log(res)
-        if(res.data.status){
-          this.setData({
-            videoList: res.data.data
-          })
-          wx.hideLoading()
-          console.log(this.data.videoList)
-        }
-      }
-    })
+    this._getVideoList()
   },
 
   /**
@@ -77,5 +63,35 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  selectItem: function(video){
+    // console.log(app.globalData)
+    app.globalData.video = video.currentTarget.dataset.video
+    app.globalData.videoList = this.data.videoList
+    // app.globalData.recommend = video.currentTarget.dataset.video
+    wx.navigateTo({
+      url: '/pages/video-details/video-details',
+    })
+  },
+
+  _getVideoList(){
+    wx.showLoading({
+      title: '数据加载中',
+    })
+    wx.request({
+      url: 'http://localhost:3000/list',
+      success: (res) => {
+        // console.log(res)
+        if (res.data.status) {
+          this.setData({
+            videoList: res.data.data
+          })
+          wx.hideLoading()
+          console.log(this.data.videoList)
+        }
+      }
+    })
   }
+  
 })

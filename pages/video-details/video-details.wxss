@@ -1,1 +1,86 @@
 /* pages/video-details/video-details.wxss */
+
+.details-wrapper {
+
+}
+
+.details-wrapper .header video{
+  width: 100%;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rpx;
+  background: #fff;
+  border-radius: 0 0 10rpx 10rpx;
+}
+
+.title-wrapper .title {
+  color:#333;
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 2em;
+}
+
+.title-wrapper .time {
+  color:#666;
+  font-size: 24rpx;
+  padding: 10rpx 0;
+}
+
+.recommend {
+  padding: 15rpx 20rpx;
+  margin-top: 15rpx;
+  background: #fff;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.recommend .title {
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15rpx;
+}
+
+.recommend .item{
+  display: flex;
+  margin-bottom: 15rpx;
+}
+
+
+.recommend .cover {
+  position: relative;
+}
+
+.recommend .cover image {
+  width: 300rpx;
+  /* min-width: 150rpx; */
+  height: 200rpx;
+  border-radius: 6rpx;
+  margin-right: 15rpx;
+}
+
+.recommend .cover .time {
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+
+.recommend .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0rpx 10rpx 25rpx;
+}
+
+.recommend .content .title{
+ font-weight: 500;
+}
+
+.recommend .content .time{
+  color: #666;
+  font-size: 24rpx;
+}
