@@ -1,0 +1,37 @@
+/* component/search.wxss */
+.search {
+  position: relative;
+  padding: 15rpx;
+  color: #fff;
+  /* border: 1rpx solid #b02015 */
+}
+
+.del {
+  position: absolute;
+  right: 20rpx;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1293135 */
+  src: url('//at.alicdn.com/t/font_1293135_d8kss8hc3c.eot');
+  src: url('//at.alicdn.com/t/font_1293135_d8kss8hc3c.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1293135_d8kss8hc3c.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1293135_d8kss8hc3c.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1293135_d8kss8hc3c.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1293135_d8kss8hc3c.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 18px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shanchu:before {
+  content: "\e68a";
+}

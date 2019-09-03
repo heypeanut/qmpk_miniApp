@@ -1,2 +1,32 @@
 <!--pages/rank/rank.wxml-->
-<text>pages/rank/rank.wxml</text>
+<view class="rank-wrapper">
+  <view class="search">
+    <search 
+      border="1rpx solid #b02015"
+      bindchange="chnageInput"
+      />
+  </view>
+  <view class="list">
+    <view class="item">
+      <text>排行</text>
+      <text>赛区</text>
+      <text>队伍名字</text>
+      <text>积分</text>
+      <text>胜场</text>
+      <text>总耗时</text>
+    </view>
+    <view class="item" wx:for="{{rankList}}" wx:key="{{item.id}}">
+      <text>{{item.rank}}</text>
+      <text>{{item.pk_region}}</text>
+      <text>{{item.team_name}}</text>
+      <text>{{item.score}}</text>
+      <text>{{item.win_count}}</text>
+      <text>{{item.win_total_time}}</text>
+    </view>
+  </view>
+  <view class="more">
+    <text class="{{util.prevDisabled(page_no)}}" bindtap="prev">上一页</text>
+    <text class="{{util.nextDisabled(page_no,total_page)}}" bindtap="next">下一页</text>
+  </view>
+</view>
+<wxs src="../../wxs/rank.wxs" module="util" />

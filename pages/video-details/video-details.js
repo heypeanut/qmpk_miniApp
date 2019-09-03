@@ -15,7 +15,7 @@ Page({
   onLoad: function (options) {
     const video = app.globalData.video
     const videoList = app.globalData.videoList
-    const recommendList = this._normalRecommend(videoList, video)
+    const recommendList = this._normalRecommend(videoList.slice(0,10), video)
     // console.log(recommendList, video)
     this.setData({
       video: video,
@@ -78,6 +78,10 @@ Page({
     this.setData({
       video: video,
       recommendList: recommendList
+    })
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300
     })
   },
   _normalRecommend(list,currentVideo){

@@ -17,7 +17,7 @@
 }
 
 .title-wrapper .title {
-  color:#333;
+  color:#1d1e32;
   font-size: 30rpx;
   font-weight: 600;
   line-height: 2em;
@@ -38,7 +38,7 @@
 
 .recommend .title {
   font-size: 26rpx;
-  color: #333;
+  color: #1d1e32;
   font-weight: 600;
   margin-bottom: 15rpx;
 }

@@ -1,0 +1,11 @@
+<!--component/search.wxml-->
+<view 
+  class="search" 
+  style="border:{{border}};color:{{color}};background:{{bgColor}}">
+  <input bindinput="changeValue" value="{{value}}"></input>
+  <view 
+    hidden="{{!value}}"
+    class="iconfont icon-shanchu del" 
+    catchtap="inputClear"
+    ></view>
+</view>

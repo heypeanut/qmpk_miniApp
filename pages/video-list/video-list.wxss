@@ -45,7 +45,7 @@
 .content .title {
   font-size: 22rpx;
   font-weight: 600;
-  color: #333;
+  color: #1d1e32;
 }
 
 .content .time {

@@ -13,6 +13,7 @@
       <view
        class="item" 
        wx:for="{{recommendList}}"
+       wx:key="item.id"
        bindtap="selectItem"
        data-video="{{item}}"
        >

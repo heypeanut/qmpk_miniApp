@@ -1,0 +1,8 @@
+module.exports = {
+  prevDisabled: function (page){
+    return page === 1 ? 'disabled' : ''
+  },
+  nextDisabled: function (page, total) {
+    return page >= total ? 'disabled' : ''
+  }
+}
