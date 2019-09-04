@@ -82,7 +82,6 @@ Page({
   more(e){
     console.log(e)
     let { team, per_page,page } = this.data
-    team = e.detail.value
     ++page
     if(page < 100){
       this._getVideoList(team, per_page,page)
@@ -95,14 +94,23 @@ Page({
 
   search(e){
     // console.log(e.detail.value)
-    let { team, per_page} = this.data
+    let { team, per_page, page,videoList} = this.data
     team = e.detail.value
-    this._getVideoList(team,50)
+    this.setData({
+      videoList:[],
+      team: team
+    })
+    this._getVideoList(team,per_page=50,page)
   },
 
   clear(){
-    let { team, per_page } = this.data
-    this._getVideoList(team, per_page)
+    let { team, per_page,page } = this.data
+    team =  ''
+    this.setData({
+      team: team,
+      videoList:[]
+    })
+    this._getVideoList(team, per_page,1)
   },
 
   _getVideoList(team, per_page, page){

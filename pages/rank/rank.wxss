@@ -10,6 +10,14 @@
   margin-bottom: 15rpx;
 }
 
+.search .picker {
+  float: left;
+  color: #fff;
+  border: 1rpx solid #b02015;
+  padding: 10rpx;
+  margin: 10rpx 20rpx 10rpx 0rpx;
+}
+
 .rank-wrapper .list .item {
   width: 100%;
   display: flex;
@@ -19,7 +27,7 @@
 .rank-wrapper .list .item text{
   width: 120rpx;
   font-size: 24rpx;
-  padding: 10rpx 0rpx;
+  padding: 12rpx 0rpx;
   color: #fff;
   border: 1rpx solid #fff;
   text-align: center;

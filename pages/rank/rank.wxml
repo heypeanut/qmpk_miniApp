@@ -4,7 +4,18 @@
     <search 
       border="1rpx solid #b02015"
       bindchange="chnageInput"
+      bindclear="clear"
       />
+    <picker bindchange="bindRegionChange" value="{{region}}" range="{{regionList}}">
+      <view class="picker">
+       选择赛区：{{regionList[region]}}
+      </view>
+    </picker>
+    <picker bindchange="bindTypeChange" value="{{pk_type}}" range="{{types}}">
+      <view class="picker">
+       选择赛事：{{types[pk_type]}}
+      </view>
+    </picker>
   </view>
   <view class="list">
     <view class="item">

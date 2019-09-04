@@ -34,7 +34,7 @@ Component({
         value: e.detail.value
       } // detail对象，提供给事件监听函数
       const myEventOption = {} // 触发事件的选项
-      this.debounce(this.triggerEvent('change', myEventDetail, myEventOption),2000)
+      this.debounce(this.triggerEvent('change', myEventDetail, myEventOption),500)
       this.setData({
         value: e.detail.value
       })
