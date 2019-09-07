@@ -1,1 +1,51 @@
 /* pages/analysis/analysis.wxss */
+.analysis {
+  background: #1d1e32;
+  color: #ffba5b;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search search {
+  width: 60%;
+  text-align: left;
+}
+
+.search .picker {
+  padding: 18rpx;
+  margin-right: -1rpx;
+  font-size: 26rpx;
+  border: 1px solid #ffba5b;
+}
+
+.title {
+  font-size:2em;
+  margin: 50rpx 0 35rpx;
+}
+
+
+.btn {
+  margin: 35rpx auto;
+}
+
+.btn button{
+  width: 380rpx;
+  background: #ffba5b;
+  color: #1d1e32;
+  border: none;
+}
+
+.prompt {
+  font-size: 20rpx;
+  color: #ccc;
+  text-align: center;
+  margin-top: 20rpx;
+}

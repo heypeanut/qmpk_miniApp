@@ -1,0 +1,128 @@
+/* pages/analysis-details/analysis-details.wxss */
+.analysis-details {
+  color: #6eabf0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1a154e;
+  padding: 30rpx 0 40rpx;
+}
+
+.header .title {
+  font-size:1.5em;
+  line-height:2em;
+}
+
+.header .round {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #6eabf0;
+  height:240rpx;
+  width: 240rpx;
+  border-radius:50%; 
+  margin-top: 35rpx;
+}
+
+.header .round text {
+  margin-bottom: 15rpx;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1d1e32;
+}
+
+.team-title {
+  font-size:1.2em;
+  padding:30rpx;
+}
+
+.team-title.all {
+  padding-bottom:0rpx; 
+}
+
+.school-title {
+  padding: 30rpx 0 ;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding:0 20rpx
+}
+
+
+.team-list .item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+
+
+.team-list .item .img {
+  width: 115rpx;
+  height: 115rpx;
+  border-radius: 50%;
+  margin-bottom: 15rpx;
+  overflow: hidden;
+}
+
+.team-list .item image {
+  height: 100%;
+  width:180rpx;
+  margin-left:-30rpx;
+}
+
+.most-team {
+  width: 100%;
+  justify-content: center;
+}
+
+.most-team .team-list{
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wins {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 15rpx;
+  border-bottom:1px solid #6eabf0;
+}
+
+ec-canvas {
+  width: 580rpx;
+  height: 550rpx;
+}
+
+.pie {
+  margin-top: 50rpx;
+  margin-bottom: -50rpx;
+}
+
+.line-time {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 30rpx;
+}

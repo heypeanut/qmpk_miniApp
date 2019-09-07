@@ -143,7 +143,7 @@ Page({
     wx.showLoading({
       title: '数据加载中',
     })
-    let url = `http://localhost:3000/rank?page_no=${page}&pk_region=${pk_region}&team_name=${team_name}&num_per_page=${num_per_page}&pk_type=${pk_type}`
+    let url = `http://localhost:3000/v0/rank?page_no=${page}&pk_region=${pk_region}&team_name=${team_name}&num_per_page=${num_per_page}&pk_type=${pk_type}`
     wx.request({
       url: url,
       success: (res) => {

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "search": "/component/search/search"
+  },
+  "navigationBarTitleText": "全民队伍分析"
 }

@@ -5,14 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    years:[2018,2019],
+    year:1,
+    yearText:2019,
+    query:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -62,5 +65,38 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  search(e){
+    // console.log(e.detail.value)
+    this.setData({
+      query: e.detail.value
+    })
+  },
+
+  bindYearChange(e){
+    let { years,year } = this.data
+    let yearText = years[e.detail.value]
+    year = e.detail.value
+    this.setData({
+      yearText: yearText,
+      year: year
+    })
+  },
+
+  analysis(){
+    const { query,yearText } = this.data
+    console.log(yearText)
+    if (query){
+      wx.navigateTo({
+        url: `/pages/analysis-details/analysis-details?name=${query}&year=${yearText}`,
+      })
+    }else{
+      wx.showToast({
+        title: '请输入正确的队伍名！',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   }
 })

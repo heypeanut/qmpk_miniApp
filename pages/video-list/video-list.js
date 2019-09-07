@@ -119,7 +119,7 @@ Page({
       title: '数据加载中',
     })
     wx.request({
-      url: `http://localhost:3000/list?team=${team}&per_page=${per_page}&page=${page}`,
+      url: `http://localhost:3000/v0/list?team=${team}&per_page=${per_page}&page=${page}`,
       success: (res) => {
         // console.log(res)
         if (res.data.status) {

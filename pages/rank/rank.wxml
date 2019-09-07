@@ -2,9 +2,11 @@
 <view class="rank-wrapper">
   <view class="search">
     <search 
-      border="1rpx solid #b02015"
+      border="1rpx solid #ffba5b"
+      color="#ffba5b"
       bindchange="chnageInput"
       bindclear="clear"
+      placeholder="请输入队伍名"
       />
     <picker bindchange="bindRegionChange" value="{{region}}" range="{{regionList}}">
       <view class="picker">
@@ -39,5 +41,6 @@
     <text class="{{util.prevDisabled(page_no)}}" bindtap="prev">上一页</text>
     <text class="{{util.nextDisabled(page_no,total_page)}}" bindtap="next">下一页</text>
   </view>
+  <view class="prompt">本数据仅供参考，以全民PK赛官网为准。</view>
 </view>
 <wxs src="../../wxs/rank.wxs" module="util" />

@@ -1,2 +1,21 @@
 <!--pages/analysis/analysis.wxml-->
-<text>pages/analysis/analysis.wxml</text>
+<view class="analysis">
+  <view class="title">队伍信息查询</view>
+  <view class="search">
+    <picker bindchange="bindYearChange" value="{{year}}" range="{{years}}">
+      <view class="picker">
+       全民PK{{years[year]}}
+      </view>
+    </picker>
+    <search  
+      border="1px solid #ffba5b"
+      color="#ffba5b"
+      bindchange="search"
+      placeholder="请输入队伍全名"
+    />
+  </view>
+  <view class="btn">
+    <button catchtap="analysis">分析队伍</button>
+  </view>
+  <view class="prompt">本数据仅供参考，以全民PK赛官网为准。</view>
+</view>

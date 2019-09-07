@@ -1,0 +1,53 @@
+<!--pages/analysis-details/analysis-details.wxml-->
+<view class="analysis-details">
+  <view class="header">
+    <text class="title">{{name}}</text>
+    <text>队伍综合数据如下</text>
+    <view class="round">
+      <text>综合胜率</text>
+      <text>{{odds}}</text>
+    </view>
+  </view>
+  <view class="team">
+    <text class="team-title">门派信息</text>
+    <view class="team-list">
+      <view class="item" wx:for="{{playSchool}}" wx:key="{{item.school}}">
+        <view class="img">
+          <image src="{{item.ava}}"></image>
+        </view>
+        <text>{{item.school}}</text>
+      </view>
+    </view>
+    <ec-canvas id="mychart-dom-graph" bind:init="echartInitRadar" canvas-id="mychart-graph" ec="{{ ecRadar }}"></ec-canvas>
+  </view>
+  <view class="team">
+    <text class="team-title all">全部阵容</text>
+    <view class="team-list most-team" 
+      wx:for="{{most_team}}"
+      wx:for-index="idx"
+      wx:key="{{idx+item.school}}"
+      >
+      <text class="team-title school-title">阵容{{idx+1}}</text>
+      <view class="team-list">
+        <view class="item" wx:for="{{item.school}}" wx:key="{{item.school}}">
+            <view class="img">
+              <image src="{{item.ava}}"></image>
+            </view>
+            <text>{{item.school}}</text>
+        </view>
+      </view>
+      <view class="wins">
+        <view>上场：{{item.num}} 次</view>
+        <view>胜场：{{item.winner}} 次</view>
+        <view>胜率：{{Math.round((item.winner/item.num)*100)}}%</view>
+      </view>
+    </view>
+    <ec-canvas id="mychart-dom-pie" class="pie" canvas-id="mychart-pie" ec="{{ picEc }}" bind:init="echartInit"></ec-canvas>
+    <ec-canvas id="mychart-dom-line" bind:init="echartInitLine" canvas-id="mychart-line" ec="{{ lineEc }}"></ec-canvas>
+    <view class="line-time">
+      <view>战斗数：{{timer.length}}场</view>
+      <view>最短：{{timer[0]}}分</view>
+      <view>最长：{{timer[timer.length-1]}}分</view>
+    </view>
+  </view>
+</view>

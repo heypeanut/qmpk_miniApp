@@ -2,7 +2,11 @@
 <view 
   class="search" 
   style="border:{{border}};color:{{color}};background:{{bgColor}}">
-  <input bindinput="changeValue" value="{{value}}"></input>
+  <input 
+    bindinput="changeValue" 
+    value="{{value}}"
+    placeholder="{{placeholder}}"
+    ></input>
   <view 
     hidden="{{!value}}"
     class="iconfont icon-shanchu del" 

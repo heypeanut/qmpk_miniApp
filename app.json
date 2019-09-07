@@ -3,7 +3,9 @@
     "pages/video-list/video-list",
     "pages/video-details/video-details",
     "pages/rank/rank",
-    "pages/analysis/analysis"
+    "pages/analysis/analysis",
+    "pages/analysis-details/analysis-details",
+    "component/ec-canvas/ec-canvas"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,7 +14,7 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color":"#1d1e32",
+    "color": "#1d1e32",
     "selectedColor": "#b02015",
     "list": [
       {

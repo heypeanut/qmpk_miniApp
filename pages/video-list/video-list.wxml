@@ -6,6 +6,7 @@
     bgColor="#fff"
     bindchange="search"
     bindclear="clear"
+    placeholder="请输入队伍名"
     />
   <scroll-view scroll-y style="height: 95vh;"  bindscrolltolower="more">
     <view class="video-list">
