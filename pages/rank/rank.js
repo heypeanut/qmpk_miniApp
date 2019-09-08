@@ -7,7 +7,7 @@ Page({
   data: {
     types:['排位赛','积分赛'],
     regionList: ['两广赛区', '闽赣赛区', '中西赛区', '东北华北赛区', '浙江赛区', '山东赛区', '豫皖赛区', '苏沪赛区'],
-    pk_type:0,
+    pk_type:1,
     region:0,
     rankList:[],
     page_no:1,
@@ -75,9 +75,9 @@ Page({
   },
 
   clear(){
-    let { page_no, pk_region, team_name, num_per_page, total_page } = this.data
+    let { page_no, pk_region, team_name, num_per_page, total_page, pk_type } = this.data
     team_name = ''
-    this._getRankList(page_no, pk_region, team_name, num_per_page)
+    this._getRankList(page_no, pk_region, team_name, num_per_page, pk_type)
   },
 
   prev(){
@@ -104,10 +104,10 @@ Page({
   },
 
   chnageInput(e){
-    let { page_no, pk_region, team_name, num_per_page, total_page } = this.data
+    let { page_no, pk_region, team_name, num_per_page, total_page, pk_type } = this.data
     team_name = e.detail.value
     // console.log(team_name)
-    this._getRankList(page_no, pk_region, team_name, num_per_page)
+    this._getRankList(page_no, pk_region, team_name, num_per_page, pk_type)
   },
 
   bindRegionChange(e){

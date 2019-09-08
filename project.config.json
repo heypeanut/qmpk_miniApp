@@ -18,10 +18,11 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.1",
+	"libVersion": "2.8.2",
 	"appid": "wx465e21e9c221454f",
 	"projectname": "%E5%85%A8%E6%B0%91PK%E8%A7%86%E9%A2%91%E5%8A%A9%E6%89%8B",
 	"debugOptions": {
