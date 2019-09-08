@@ -41,6 +41,7 @@
     <text class="{{util.prevDisabled(page_no)}}" bindtap="prev">上一页</text>
     <text class="{{util.nextDisabled(page_no,total_page)}}" bindtap="next">下一页</text>
   </view>
-  <view class="prompt">本数据仅供参考，以全民PK赛官网为准。</view>
+  <view class="prompt">本站数据仅供参考，以全民PK赛官网为准。只为方便大家查看录像学习。</view>
+  <view class="prompt">全民PK官方网站：http://xyq.163.com/2019/pk/</view>
 </view>
 <wxs src="../../wxs/rank.wxs" module="util" />
