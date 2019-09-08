@@ -341,7 +341,7 @@ Page({
       title: '分析中',
     })
     wx.request({
-      url: `http://localhost:3000/v0/analysis?team=${name}&year=${year}`,
+      url: `https://api.nnh206.vip/v0/analysis?team=${name}&year=${year}`,
       success: (res) => {
         
         if (res.data.status) {
@@ -354,6 +354,7 @@ Page({
               title: '当前选择年度无队伍信息',
               icon: 'none',
               duration: 2000,
+              mask:true,
               success: () => {
                 setTimeout(()=>{
                   wx.navigateBack()

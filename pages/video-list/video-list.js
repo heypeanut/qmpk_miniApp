@@ -52,14 +52,22 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    let { team, per_page, page } = this.data
+    this._getVideoList(team, per_page, page)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    let { team, per_page, page } = this.data
+    ++page
+    if (page < 100) {
+      this._getVideoList(team, per_page, page)
+      this.setData({
+        page: page
+      })
+    }
   },
 
   /**
@@ -77,19 +85,6 @@ Page({
     wx.navigateTo({
       url: '/pages/video-details/video-details',
     })
-  },
-
-  more(e){
-    console.log(e)
-    let { team, per_page,page } = this.data
-    ++page
-    if(page < 100){
-      this._getVideoList(team, per_page,page)
-      this.setData({
-        page:page
-      })
-    }
-    
   },
 
   search(e){
@@ -119,13 +114,14 @@ Page({
       title: '数据加载中',
     })
     wx.request({
-      url: `http://localhost:3000/v0/list?team=${team}&per_page=${per_page}&page=${page}`,
+      url: `https://api.nnh206.vip/v0/list?team=${team}&per_page=${per_page}&page=${page}`,
       success: (res) => {
         // console.log(res)
         if (res.data.status) {
           this.setData({
             videoList: videoList.concat(res.data.data)
           })
+          wx.stopPullDownRefresh()
           wx.hideLoading()
         }
       }
